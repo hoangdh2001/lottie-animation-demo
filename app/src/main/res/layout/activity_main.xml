@@ -21,6 +21,13 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:lottie_rawRes="@raw/button_switch" />
+    
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/preloader" />
 
 <!--    <com.airbnb.lottie.LottieAnimationView-->
 <!--        android:layout_width="300dp"-->

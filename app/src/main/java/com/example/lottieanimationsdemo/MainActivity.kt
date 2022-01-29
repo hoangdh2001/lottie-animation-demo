@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         val lottieSwitchButton = binding.lottieSwitchButton
+        lottieSwitchButton.speed = 3f
         lottieSwitchButton.setOnClickListener {
             if (isSwitchOn) {
                 lottieSwitchButton.setMinAndMaxProgress(0.5f, 1.0f)
