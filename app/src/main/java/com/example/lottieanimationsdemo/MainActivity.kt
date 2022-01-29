@@ -7,6 +7,7 @@ import com.example.lottieanimationsdemo.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     var isCheckedDone = false
+    var isSwitchOn = false
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,18 @@ class MainActivity : AppCompatActivity() {
                 lottieCheckDone.speed = 1f
                 lottieCheckDone.playAnimation()
                 isCheckedDone = true
+            }
+        }
+        val lottieSwitchButton = binding.lottieSwitchButton
+        lottieSwitchButton.setOnClickListener {
+            if (isSwitchOn) {
+                lottieSwitchButton.setMinAndMaxProgress(0.5f, 1.0f)
+                lottieSwitchButton.playAnimation()
+                isSwitchOn = false
+            } else {
+                lottieSwitchButton.setMinAndMaxProgress(0.0f, 0.5f)
+                lottieSwitchButton.playAnimation()
+                isSwitchOn = true
             }
         }
     }
